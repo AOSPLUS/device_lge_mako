@@ -65,6 +65,10 @@ PRODUCT_PROPERTY_OVERRIDES += \
     ro.Javierd.version=$(AOSPLUS_VERSION) \
     ro.modversion=$(AOSPLUS_MOD_VERSION)
 
+# Bootanimation and apps
+PRODUCT_COPY_FILES := vendor/AOSPLUS/prebuilt/commom/bootanimation/bootanimation.zip:system/media/
+PRODUCT_COPY_FILES := vendor/AOSPLUS/prebuilt/commom/apps/NovaLauncher.apk:system/apps/
+
 # Inherit from hardware-specific part of the product configuration
 $(call inherit-product, device/lge/mako/device.mk)
 $(call inherit-product-if-exists, vendor/lge/mako/device-vendor.mk)
